@@ -1,0 +1,169 @@
+JFDML JFormDesigner: "8.1.1.0.298" Java: "17.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) {
+			"autoSize": false
+		} ) {
+			name: "this"
+			"resizable": false
+			"defaultCloseOperation": 3
+			"preferredSize": new java.awt.Dimension( 800, 600 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {par l {seq l {space :p:16:p, comp pasueButton:::p:138:p}, seq l {space :::p, comp comparetorPanel:::p::p}, seq l {space :::p, comp addPanel:::p::p}}, space ::18:x}}"
+				"$verticalGroup": "par l {seq {space :::p, comp pasueButton:::p:39:p, space :::p, comp addPanel:::p::p, space u:::p, comp comparetorPanel:::p::p, space ::37:x}}"
+			} ) {
+				name: "panel1"
+				"border": new javax.swing.border.TitledBorder( "操作空间" )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "pasueButton"
+					"text": "开始"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "pauseButtonMouseClicked", true ) )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, par l {comp addButton:::p:137:p, par t:l::p {seq {comp label3:::p::p, space :::x, comp priorityInput:::p:88:p}, seq {comp label2:::p::p, space :::p, comp runtimeInput:::p:76:p}}}, space :6:8:x}}"
+					"$verticalGroup": "par l {seq l {space :::p, par b {comp label2::b:p::p, comp runtimeInput::b:p:24:p}, space :p:9:p, par l {comp label3:::p::p, comp priorityInput:::p:24:p}, space s:::p, comp addButton::::39:x}}"
+				} ) {
+					name: "addPanel"
+					"border": new javax.swing.border.TitledBorder( "添加进程" )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "运行时间"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "优先级"
+					} )
+					add( new FormComponent( "group.model.MyFormattedNumberField" ) {
+						name: "runtimeInput"
+					} )
+					add( new FormComponent( "group.model.MyFormattedNumberField" ) {
+						name: "priorityInput"
+						"text": "1"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "addButton"
+						"text": "加入"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "addButtonMouseClicked", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {seq {comp label8:::p::p, space :p:18:p, comp checkBoxTime:::p::p, space :::p, comp timeInput:::p::p}, seq {comp label4:::p::p, space :::p, comp radioFCFS:::p::p}, seq {comp label5:::p::p, space :::p, comp radioShort:::p::p}, seq {comp label7:::p::p, space :::p, comp radioPriority:::p::p}, seq l {comp label6:::p::p, space :::p, comp radioLong:::p::p}}, space :0:8:x}}"
+					"$verticalGroup": "par l {seq l {par b {comp radioFCFS::b:p::p, comp label4::b:p::p}, space :::p, par b {comp radioShort::b:p::p, comp label5::b:p::p}, space :::p, par b {comp label6::b:p::p, comp radioLong::b:p::p}, space :p:9:p, par b {comp radioPriority::b:p::p, comp label7::b:::x}, space :::p, par l {comp checkBoxTime:::::x, comp label8::l:::x, comp timeInput::l::0:x}}}"
+				} ) {
+					name: "comparetorPanel"
+					"border": new javax.swing.border.TitledBorder( "调度策略" )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "先来先服务"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label5"
+						"text": "短作业优先"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label6"
+						"text": "长作业优先"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label7"
+						"text": "按照优先级"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label8"
+						"text": "分时系统"
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "radioFCFS"
+						"text": " 0"
+						"selected": true
+						auxiliary() {
+							"JavaCodeGenerator.variableName": "radioFCFS"
+						}
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "radioClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "radioShort"
+						"text": " 1"
+						auxiliary() {
+							"JavaCodeGenerator.variableName": "radioShort"
+						}
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "radioClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "radioLong"
+						"text": " 2"
+						auxiliary() {
+							"JavaCodeGenerator.variableName": "radioLong"
+						}
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "radioClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "radioPriority"
+						"text": " 3"
+						auxiliary() {
+							"JavaCodeGenerator.variableName": "radioPrority"
+						}
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "radioClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBoxTime"
+						"text": " "
+						auxiliary() {
+							"JavaCodeGenerator.variableName": "checkBoxTime"
+						}
+						addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "checkBoxTimeStateChanged", true ) )
+					} )
+					add( new FormComponent( "group.model.MyFormattedNumberField" ) {
+						name: "timeInput"
+						"columns": 3
+						"text": "100"
+					} )
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 530
+				"y": 20
+				"width": 195
+				"height": 425
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+				"alignment": 0
+				"hgap": 2
+				"vgap": 2
+			} ) {
+				name: "queuePanel"
+				"border": new javax.swing.border.TitledBorder( "就绪队列" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 175
+				"height": 490
+				"x": 10
+				"y": 15
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "cpuIcon"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/group/assets/cpu.svg" )
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "CPULabel"
+				}
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "cpuIconMouseClicked", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 250
+				"y": 10
+				"width": 200
+				"height": 170
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "cpuProcessLabel"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 270
+				"y": 175
+				"width": 160
+				"height": 105
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 740, 445 )
+		} )
+	}
+}

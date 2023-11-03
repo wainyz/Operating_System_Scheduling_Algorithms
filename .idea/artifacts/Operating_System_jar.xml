@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Operating_System:jar">
+    <output-path>$USER_HOME$/Desktop/操作系统程序</output-path>
+    <root id="archive" name="Operating_System.jar">
+      <element id="module-output" name="Operating_System" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../mvn_repository/net/bytebuddy/byte-buddy/1.10.5/byte-buddy-1.10.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../mvn_repository/name/remal/tools/test/common/1.26.147/common-1.26.147.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../mvn_repository/org/mockito/mockito-core/3.3.3/mockito-core-3.3.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../mvn_repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../mvn_repository/net/bytebuddy/byte-buddy-agent/1.10.5/byte-buddy-agent-1.10.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../mvn_repository/com/formdev/flatlaf/3.2.1/flatlaf-3.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../mvn_repository/com/github/weisj/jsvg/1.1.0/jsvg-1.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../mvn_repository/org/assertj/assertj-guava/3.3.0/assertj-guava-3.3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../mvn_repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../mvn_repository/org/assertj/assertj-db/1.3.0/assertj-db-1.3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../mvn_repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../mvn_repository/com/formdev/flatlaf-extras/3.2.1/flatlaf-extras-3.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../mvn_repository/org/assertj/assertj-core/3.15.0/assertj-core-3.15.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../mvn_repository/com/nhaarman/mockito-kotlin/1.6.0/mockito-kotlin-1.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../mvn_repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

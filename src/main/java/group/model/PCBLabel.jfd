@@ -1,0 +1,21 @@
+JFDML JFormDesigner: "8.1.1.0.298" Java: "17.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormComponent( "javax.swing.JLabel" ) {
+			name: "this"
+			"icon": new com.jformdesigner.model.SwingIcon( 0, "/group/assets/PCB_BOX.svg" )
+			"border": new javax.swing.border.EtchedBorder( 1, null, null )
+			"font": new com.jformdesigner.model.SwingDerivedFont( "微软雅黑", 0, 0, false )
+			"maximumSize": new java.awt.Dimension( 58, 90 )
+			"verticalAlignment": 1
+			auxiliary() {
+				"JavaCodeGenerator.customCreate": true
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 230, 205 )
+			"size": new java.awt.Dimension( 130, 85 )
+		} )
+	}
+}
