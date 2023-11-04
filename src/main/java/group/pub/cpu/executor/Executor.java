@@ -78,11 +78,13 @@ public class Executor {
                 }
                 //这个是对于整个执行器的占有
                 synchronized (Executor.class) {
+                    System.out.println("获取执行器类对象占有...");
                     //选择执行进程
-                    process.setLOCK(LOCK);
                     if (process.getState() == Thread.State.NEW) {
-                        process.setDaemon(true);
-                        process.start();
+                        process.setLOCK(LOCK);
+                        synchronized (LOCK){
+                            process.start();
+                        }
                     } else {
                         //设置interrupt标志,并唤醒因为interrupt和LOCK占有的线程
                         synchronized (LOCK) {
@@ -90,12 +92,14 @@ public class Executor {
                             LOCK.notifyAll();
                         }
                     }
+                    System.out.println("等待任务完成或定时器对于执行类对象的通知...");
                     //等待进程通知
                     Executor.class.wait();
+                    System.out.println("已接到对于执行器类对象的通知...");
                 }
                 //判断是进程打断还是时间片打断
-                if (!timer.isPauseTurn() || process.isAlive()) {
-                    System.out.println("认为被时间片打断");
+                if (!timer.isPauseTurn() && process.getLOCK()!=null) {
+                    System.out.println("执行器认为是来自定时器的通知");
                     //打断当前正在执行的process
                     process.interrupt();
                     currentProcess.setRunningTime(currentProcess.getRunningTime() - timer.getMills());
