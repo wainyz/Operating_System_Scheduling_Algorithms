@@ -34,13 +34,17 @@ public class Process extends Thread {
                 return;
             }
             try {
+                System.out.println("试图执行任务而请求获取LOCK占有...");
                 synchronized (LOCK) {
-                    System.out.println("正在执行任务时间是" + runningTime + "...");
+                    System.out.println("申请到锁,正在执行任务时间是" + runningTime + "...");
                     LOCK.wait(runningTime);
+                    System.out.println("任务执行完毕!试图获取执行器类对象...");
                     synchronized (Executor.class) {
                         //通知执行器
+                        System.out.println("已拿到执行器类对象锁,试图通知类对象...");
                         Executor.class.notifyAll();
-                        System.out.println("交还处理机");
+                        System.out.println("通知完毕,任务销毁,还处理机...");
+                        this.setLOCK(null);
                         return;
                     }
                 }
