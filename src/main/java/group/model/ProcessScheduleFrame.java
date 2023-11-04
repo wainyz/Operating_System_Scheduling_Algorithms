@@ -268,7 +268,7 @@ public class ProcessScheduleFrame extends JFrame {
         {
             panel1.setBorder(new TitledBorder("\u64cd\u4f5c\u7a7a\u95f4"));
             panel1.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax. swing. border
-            . EmptyBorder( 0, 0, 0, 0) , "作者: wainyz", javax. swing. border. TitledBorder. CENTER, javax
+            . EmptyBorder( 0, 0, 0, 0) , "\u4f5c\u8005\u003a\u0020\u0077\u0061\u0069\u006e\u0079\u007a", javax. swing. border. TitledBorder. CENTER, javax
             . swing. border. TitledBorder. BOTTOM, new java .awt .Font ("D\u0069alog" ,java .awt .Font .BOLD ,
             12 ), java. awt. Color. red) ,panel1. getBorder( )) ); panel1. addPropertyChangeListener (new java. beans
             . PropertyChangeListener( ){ @Override public void propertyChange (java .beans .PropertyChangeEvent e) {if ("\u0062order" .equals (e .
