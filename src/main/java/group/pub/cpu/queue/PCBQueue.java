@@ -30,7 +30,7 @@ public class PCBQueue {
         array.remove(0);
         controller.remove(0);
         controller.updateUI();
-        System.out.println(result.toString() + " 出列!!!,当前剩余: " + array.size());
+        System.out.println(result.getName() + " 出列!!!,当前剩余: " + array.size());
         return result;
     }
 
@@ -70,8 +70,9 @@ public class PCBQueue {
         System.out.println("应用比较规则:"+comparator.toString());
         this.comparator = comparator;
         //暂时选择清除所有数据
-        controller.clearQueue();
-        array.clear();
+//        controller.clearQueue();
+//        array.clear();
+
     }
     public boolean isEmpty() {
         return array.isEmpty();
