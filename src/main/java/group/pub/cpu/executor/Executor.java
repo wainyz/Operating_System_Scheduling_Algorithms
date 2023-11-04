@@ -98,7 +98,7 @@ public class Executor {
                     System.out.println("已接到对于执行器类对象的通知...");
                 }
                 //判断是进程打断还是时间片打断
-                if (!timer.isPauseTurn() && process.getLOCK()!=null) {
+                if (process.getLOCK()!=null) {
                     System.out.println("执行器认为是来自定时器的通知");
                     //打断当前正在执行的process
                     process.interrupt();
